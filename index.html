@@ -1,170 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tamam News HD</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #fff;
-            color: #000;
-            transition: all 0.3s ease;
-        }
-        body.dark {
-            background: #121212;
-            color: #fff;
-        }
-        header {
-            background: #222;
-            color: #fff;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-        }
-        header button {
-            background: #ff6600;
-            border: none;
-            padding: 8px 12px;
-            color: #fff;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        header button:hover {
-            background: #e55b00;
-        }
-        .logo img {
-            height: 50px;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 15px;
-            margin: 0;
-            padding: 0;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-        }
-        /* Ticker Style */
-        .ticker {
-            background: #ff0000;
-            color: #fff;
-            overflow: hidden;
-            white-space: nowrap;
-        }
-        .ticker-wrap {
-            display: inline-block;
-            padding-left: 100%;
-            animation: ticker 20s linear infinite;
-        }
-        .ticker-move {
-            display: inline-flex;
-            gap: 50px;
-        }
-        @keyframes ticker {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-100%); }
-        }
-        .ticker-item {
-            font-weight: bold;
-            padding: 10px 0;
-        }
-        .news-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-        .news-card {
-            border: 1px solid #ccc;
-            padding: 10px;
-            border-radius: 5px;
-            background: #f9f9f9;
-            transition: transform 0.3s ease;
-        }
-        .news-card:hover {
-            transform: scale(1.02);
-        }
-        .news-card img {
-            width: 100%;
-            border-radius: 5px;
-        }
-        footer {
-            background: #222;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-        }
-        @media (max-width: 600px) {
-            nav ul {
-                flex-direction: column;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tamam News HD</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #000;
+      transition: all 0.3s ease;
+    }
+    body.dark {
+      background: #121212;
+      color: #fff;
+    }
+    header {
+      background: #222;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+    header button {
+      background: #ff6600;
+      border: none;
+      padding: 8px 12px;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    header button:hover {
+      background: #e55b00;
+    }
+    .logo img {
+      height: 50px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      margin: 0;
+      padding: 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .ticker {
+      background: #ff0000;
+      color: #fff;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .ticker-wrap {
+      display: inline-block;
+      padding-left: 100%;
+      animation: ticker 20s linear infinite;
+    }
+    .ticker-move {
+      display: inline-flex;
+      gap: 50px;
+    }
+    @keyframes ticker {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+    .ticker-item {
+      font-weight: bold;
+      padding: 10px 0;
+    }
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .news-card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      background: #f9f9f9;
+      transition: transform 0.3s ease;
+    }
+    .news-card:hover {
+      transform: scale(1.02);
+    }
+    .news-card img {
+      width: 100%;
+      border-radius: 5px;
+    }
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="logo.png" alt="Tamam News HD Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Siyasat</a></li>
-                <li><a href="#">Sports</a></li>
-                <li><a href="#">Entertainment</a></li>
-                <li><a href="#">Technology</a></li>
-            </ul>
-        </nav>
-        <button id="darkModeBtn">Dark Mode</button>
-    </header>
+  <header>
+    <div class="logo">
+      <!-- Placeholder Base64 Logo -->
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAABV7bNHAAAABHNCSVQICAgIfAhkiAAAA..." alt="Tamam News HD Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Siyasat</a></li>
+        <li><a href="#">Sports</a></li>
+        <li><a href="#">Entertainment</a></li>
+        <li><a href="#">Technology</a></li>
+      </ul>
+    </nav>
+    <button id="darkModeBtn">Dark Mode</button>
+  </header>
 
-    <section class="ticker">
-        <div class="ticker-wrap">
-            <div class="ticker-move">
-                <div class="ticker-item">Breaking: Karachi me barish, shehar ke mukhtalif ilaqe doob gaye!</div>
-                <div class="ticker-item">Sports: Pakistan ne India ko thriller match me hara dia!</div>
-                <div class="ticker-item">Tech: Naya smartphone AI features ke sath launch ho gaya!</div>
-                <div class="ticker-item">Siyasat: Budget 2025 announce, logon ke liye nayi sahulatain!</div>
-            </div>
-        </div>
-    </section>
+  <section class="ticker">
+    <div class="ticker-wrap">
+      <div class="ticker-move">
+        <div class="ticker-item">Breaking: Karachi me barish, shehar ke mukhtalif ilaqe doob gaye!</div>
+        <div class="ticker-item">Sports: Pakistan ne India ko thriller match me hara dia!</div>
+        <div class="ticker-item">Tech: Naya smartphone AI features ke sath launch ho gaya!</div>
+        <div class="ticker-item">Siyasat: Budget 2025 announce, logon ke liye nayi sahulatain!</div>
+      </div>
+    </div>
+  </section>
 
-    <section class="latest-news">
-        <h2 style="padding: 20px;">Latest News</h2>
-        <div class="news-grid">
-            <div class="news-card">
-                <img src="https://via.placeholder.com/300x200" alt="News">
-                <h3>Shehar me bijli ka buhran</h3>
-                <p>Bijli ki bandish se shehar ke log shadeed pareshan, sarkari idaray action me.</p>
-            </div>
-            <div class="news-card">
-                <img src="https://via.placeholder.com/300x200" alt="News">
-                <h3>Film industry ka revival</h3>
-                <p>Naye directors aur actors ki wajah se film industry dobara active ho gayi.</p>
-            </div>
-            <div class="news-card">
-                <img src="https://via.placeholder.com/300x200" alt="News">
-                <h3>Technology ka naya daur</h3>
-                <p>Artificial Intelligence se mulk ki economy me naya roshan mustaqbil.</p>
-            </div>
-        </div>
-    </section>
+  <section class="latest-news">
+    <h2 style="padding: 20px;">Latest News</h2>
+    <div class="news-grid">
+      <div class="news-card">
+        <img src="https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?w=800" alt="News 1">
+        <h3>Shehar me bijli ka buhran</h3>
+        <p>Bijli ki bandish se shehar ke log shadeed pareshan, sarkari idaray action me.</p>
+      </div>
+      <div class="news-card">
+        <img src="https://images.unsplash.com/photo-1598387993644-85b2b57a6b2a?w=800" alt="News 2">
+        <h3>Film industry ka revival</h3>
+        <p>Naye directors aur actors ki wajah se film industry dobara active ho gayi.</p>
+      </div>
+      <div class="news-card">
+        <img src="https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?w=800" alt="News 3">
+        <h3>Technology ka naya daur</h3>
+        <p>Artificial Intelligence se mulk ki economy me naya roshan mustaqbil.</p>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Tamam News HD. Sab Huqooq Mehfooz.</p>
-    </footer>
+  <footer>
+    <p>&copy; 2025 Tamam News HD. Sab Huqooq Mehfooz.</p>
+  </footer>
 
-    <script>
-        const darkModeBtn = document.getElementById('darkModeBtn');
-        darkModeBtn.addEventListener('click', () => {
-            document.body.classList.toggle('dark');
-        });
-    </script>
+  <script>
+    const darkModeBtn = document.getElementById('darkModeBtn');
+    darkModeBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+  </script>
 </body>
 </html>
