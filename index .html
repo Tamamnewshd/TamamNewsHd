@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tamam News HD</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header { display: flex; justify-content: space-between; align-items: center; background: #222; color: #fff; padding: 10px 20px; }
+    .logo img { height: 50px; }
+    nav ul { list-style: none; display: flex; gap: 15px; margin: 0; padding: 0; }
+    nav a { color: #fff; text-decoration: none; }
+    .ticker { background: #ff0000; color: #fff; overflow: hidden; white-space: nowrap; }
+    .ticker-wrap { display: inline-block; padding-left: 100%; animation: ticker 20s linear infinite; }
+    .ticker-move { display: inline-flex; gap: 50px; }
+    @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
+    .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 20px; }
+    .news-card { border: 1px solid #ccc; padding: 10px; border-radius: 5px; background: #f9f9f9; }
+    .news-card img { width: 100%; border-radius: 5px; }
+    footer { background: #222; color: #fff; text-align: center; padding: 10px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAGQCAYAAAB...BASE64_FULL_IMAGE..." alt="Tamam News HD Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Siyasat</a></li>
+        <li><a href="#">Sports</a></li>
+        <li><a href="#">Entertainment</a></li>
+        <li><a href="#">Technology</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="ticker">
+    <div class="ticker-wrap">
+      <div class="ticker-move">
+        <div class="ticker-item">Breaking: Karachi me barish, shehar ke mukhtalif ilaqe doob gaye!</div>
+        <div class="ticker-item">Sports: Pakistan ne India ko thriller match me hara dia!</div>
+        <div class="ticker-item">Tech: Naya smartphone AI features ke sath launch ho gaya!</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="latest-news">
+    <h2 style="padding: 20px;">Latest News</h2>
+    <div class="news-grid">
+      <div class="news-card">
+        <img src="https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?w=800" alt="News 1">
+        <h3>Shehar me bijli ka buhran</h3>
+        <p>Bijli ki bandish se shehar ke log shadeed pareshan, sarkari idaray action me.</p>
+      </div>
+      <div class="news-card">
+        <img src="https://images.unsplash.com/photo-1598387993644-85b2b57a6b2a?w=800" alt="News 2">
+        <h3>Film industry ka revival</h3>
+        <p>Naye directors aur actors ki wajah se film industry dobara active ho gayi.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Tamam News HD. Sab Huqooq Mehfooz.</p>
+  </footer>
+</body>
+</html>
