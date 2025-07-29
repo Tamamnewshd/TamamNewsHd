@@ -1,86 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tamam News HD</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    header { display: flex; justify-content: space-between; align-items: center; background: #222; color: #fff; padding: 10px 20px; }
-    .logo img { height: 50px; }
-    nav ul { list-style: none; display: flex; gap: 15px; margin: 0; padding: 0; }
-    nav a { color: #fff; text-decoration: none; }
-    .ticker { background: #ff0000; color: #fff; overflow: hidden; white-space: nowrap; }
-    .ticker-wrap { display: inline-block; padding-left: 100%; animation: ticker 20s linear infinite; }
-    .ticker-move { display: inline-flex; gap: 50px; }
-    @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
-    .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 20px; }
-    .news-card { border: 1px solid #ccc; padding: 10px; border-radius: 5px; background: #f9f9f9; }
-    .news-card img { width: 100%; border-radius: 5px; }
-    footer { background: #222; color: #fff; text-align: center; padding: 10px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamam News HD</title>
+    <style>
+        body {font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4;}
+        header {background: #333; color: #fff; padding: 10px 20px; display: flex; align-items: center;}
+        header img {height: 50px; margin-right: 15px;}
+        nav a {color: #fff; margin: 0 10px; text-decoration: none; font-weight: bold;}
+        nav a:hover {text-decoration: underline;}
+        .breaking {background: red; color: white; padding: 8px; font-weight: bold; animation: move 10s linear infinite;}
+        @keyframes move {0% {transform: translateX(100%);} 100% {transform: translateX(-100%);}}
+        .container {padding: 20px;}
+        .news-card {background: #fff; padding: 15px; margin-bottom: 20px; border-radius: 5px; box-shadow: 0 0 5px rgba(0,0,0,0.1);}
+        .news-card img {width: 100%; border-radius: 5px;}
+        footer {background: #222; color: #fff; text-align: center; padding: 10px; margin-top: 20px;}
+    </style>
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <!-- Aapke bheje hue logo ka Base64 embed -->
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAdhgAAHYYBkK+W1wAAABl0RVh0U29mdHdhcmUAZ2lmM2pmaW5lIHByb2R1Y2VyIG9wdGltaXplZC5uZXQgdjEuMy4xMNBBKswAAAHmSURBVHja7doxTsMwDIVhq/7/z5FiVElSMQ8izqkqUVYbSHsTwjcF3Jp0HkOMV4s4QuuGLAtuv6/v5jZ1YYo6phK7VW1sVdGr8wD4BoRoAC6Afz0yVm6WGHMcGLYADYAhoC8J7A2WIo59ClIBjLJuEtYLlrgfMEAD58ADIFbgHFoF4XAAMgAmQBuSznrHwCMFhgSG0S2h8rAmNB9nqHgO3sRvxuGN6CBZqCkxlTKwDcwbomSmAkRzazLh4Arh3+oPHEV7EgYY9xkTtJqwnZnDsoYOV4OmUNrxL7bhuLTOYo9zzCyHJrBkbGs44kgr/SELMJ4+MkxKJHRGgxSEa2xBaMCNYBLC9f50BPucnqXBoY0k5xTGvlklKeNQmOtRxZWVk+lKXFFgHSSGJqEYt5/hE5J+orj5eQ8bRXmfM+vABm/Whw1K2gbZZUugwDzCsYxtBEmaTdPAacpl7sfY7aCojDP7kPs69rY3niTi1pJZnA2sQSecrwFGaDiWC6f51HH5x3RcBrCAeSmb1iKoS+vL0SfxAAoBKNnK1Rf5kZfgBo2FHQBWw0T6AAAAAElFTkSuQmCC" alt="Tamam News HD Logo">
-    </div>
+
+<header>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAYAAABbL..." alt="Tamam News HD Logo">
     <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Punjab</a></li>
-        <li><a href="#">Sports</a></li>
-        <li><a href="#">Entertainment</a></li>
-        <li><a href="#">Technology</a></li>
-      </ul>
+        <a href="#">Home</a>
+        <a href="#">Punjab</a>
+        <a href="#">Sports</a>
+        <a href="#">Entertainment</a>
+        <a href="#">World</a>
     </nav>
-  </header>
+</header>
 
-  <section class="ticker">
-    <div class="ticker-wrap">
-      <div class="ticker-move">
-        <div class="ticker-item">Breaking: Punjab me barsaat, Lahore ke mukhtalif ilaqe paani me ghire!</div>
-        <div class="ticker-item">Politics: Punjab Assembly me nayi tehreek par vote!</div>
-        <div class="ticker-item">Education: Punjab Board ke results announce!</div>
-      </div>
-    </div>
-  </section>
+<div class="breaking">
+    Mukhtalif ilaqe paani me ghire! Politics: Punjab me barish se shahraain band!
+</div>
 
-  <section class="latest-news">
-    <h2 style="padding: 20px;">Punjab Latest News</h2>
-    <div class="news-grid">
-      <div class="news-card">
-        <img src="https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?w=800" alt="News 1">
+<div class="container">
+    <h2>Punjab Latest News</h2>
+    <div class="news-card">
+        <img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc" alt="Heavy Rain">
         <h3>Lahore main heavy rain</h3>
         <p>Sheher ke aksar ilaqon me paani bhar gaya, awaam shadeed pareshan.</p>
-      </div>
-      <div class="news-card">
-        <img src="https://images.unsplash.com/photo-1598387993644-85b2b57a6b2a?w=800" alt="News 2">
-        <h3>Multan ka agriculture expo</h3>
-        <p>Kisano ke liye nayi technology aur behtareen beej introduce hue.</p>
-      </div>
-      <div class="news-card">
-        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800" alt="News 3">
-        <h3>Punjab cricket team</h3>
-        <p>Punjab ki team ne national championship jeet li.</p>
-      </div>
-      <div class="news-card">
-        <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800" alt="News 4">
-        <h3>Education reforms</h3>
-        <p>Naye syllabus aur digital classrooms introduce kiye gaye.</p>
-      </div>
-      <div class="news-card">
-        <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800" alt="News 5">
-        <h3>Transport updates</h3>
-        <p>Metro bus service ka extension project launch ho gaya.</p>
-      </div>
     </div>
-  </section>
+</div>
 
-  <footer>
-    <p>CEO: Arslan Chaudry | Gmail: <a href="mailto:tamamnewshd@gmail.com">tamamnewshd@gmail.com</a></p>
-    <p>&copy; 2025 Tamam News HD. Sab Huqooq Mehfooz.</p>
-  </footer>
+<footer>
+    <p>&copy; 2025 Tamam News HD | CEO: Arslan Chaudry | Email: tamamnewshd@gmail.com</p>
+</footer>
+
 </body>
 </html>
